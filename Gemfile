@@ -37,6 +37,7 @@ gem 'factory_bot_rails'
 gem 'faker'
 gem 'faraday'
 gem 'figaro'
+gem 'rubocop-rails'
 
 
 group :development, :test do
