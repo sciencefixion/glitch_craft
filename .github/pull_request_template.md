@@ -1,8 +1,5 @@
 ## All Submissions:
 
-### Issues
-Resolves #
-
 ### New Feature Submissions:
 * [ ] Have you added an explanation of what your changes do?
 * [ ] Have you linted your code locally prior to submission?
