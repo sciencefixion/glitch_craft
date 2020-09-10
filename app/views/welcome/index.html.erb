@@ -1,2 +1,14 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>GlitchCraft</h1>
+
+<section class="description">
+  <h3>Welcome!</h3>
+  <p>This app allows you to glitch a photo that is created by an AI based on a word or phrase that you provide.</p>
+</section>
+
+<section class="staple-image">
+  <%= image_tag("https://www.webdesignbites.com/wp-content/uploads/2019/04/glitch-art.jpg") %>
+</section>
+
+<section class="create">
+  <%= button_to 'Login with Google to Start Glitching', '/auth/google_oauth2' %>
+</section>
