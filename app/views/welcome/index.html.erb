@@ -1,14 +1,17 @@
 <h1>GlitchCraft</h1>
+<div class="text-center">
 
-<section class="description">
-  <h3>Welcome!</h3>
-  <p>This app allows you to glitch a photo that is created by an AI based on a word or phrase that you provide.</p>
-</section>
+  <section class="description">
+    <h3>Welcome!</h3>
+    <p>This app allows you to glitch a photo that is created by an AI based on a word or phrase that you provide.</p>
+  </section>
 
-<section class="staple-image">
-  <%= image_tag("https://www.webdesignbites.com/wp-content/uploads/2019/04/glitch-art.jpg") %>
-</section>
+  <section class="staple-image">
+    <%= image_tag("https://www.webdesignbites.com/wp-content/uploads/2019/04/glitch-art.jpg") %>
+  </section>
 
-<section class="create">
-  <%= button_to 'Login with Google to Start Glitching', '/auth/google_oauth2' %>
-</section>
+  <section class="create">
+    <%= button_to 'Login with Google to Start Glitching', '/auth/google_oauth2', class: 'btn btn-primary mt-4' %>
+
+  </section>
+</div>
