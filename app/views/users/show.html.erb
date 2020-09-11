@@ -1,2 +1,14 @@
-<h1>Welcome <%= @user.name %></h1>
-<%= @user.email %>
+<h1>Dashboard</h1>
+
+<h2>Welcome <%= @user.name %></h2>
+
+<section class="image-search">
+  <p>
+    <%= form_tag "/images", method: :get do %>
+    <%= label_tag :search %>
+    <%= text_field_tag :search %>
+
+    <%= submit_tag "Search" %>
+    <% end %>
+  </p>
+</section>
