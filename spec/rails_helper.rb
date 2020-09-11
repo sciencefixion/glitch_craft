@@ -69,6 +69,23 @@ RSpec.configure do |config|
   	   with.library :rails
   	end
   end
-  
+
   config.include FactoryBot::Syntax::Methods
+
+  def mock_user
+   OmniAuth.config.test_mode = true
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+      :provider => "google",
+      :uid => "12345",
+      :info => {
+       :name => "Sample Name",
+       :email => "name@name.com"
+      },
+      :credentials => {
+       :google_token => "google_token",
+       :google_refresh_token => "google_refresh_token"
+      }
+     }
+    )
+  end
 end
