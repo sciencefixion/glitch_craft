@@ -82,8 +82,8 @@ RSpec.configure do |config|
        :email => "name@name.com"
       },
       :credentials => {
-       :google_token => "google_token",
-       :google_refresh_token => "google_refresh_token"
+       :token => "google_token",
+       :refresh_token => "google_refresh_token"
       }
      }
     )

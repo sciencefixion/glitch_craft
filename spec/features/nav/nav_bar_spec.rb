@@ -20,6 +20,11 @@ RSpec.describe 'Nav Bar' do
   end
 
   describe 'As a logged in user' do
+    before :each do
+      @user = User.from_omniauth(mock_user)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    end
+
     it "should display a link for home that leads back to dashbord" do
       visit '/'
       within('.navbar') do
