@@ -38,6 +38,7 @@ gem 'faker'
 gem 'faraday'
 gem 'figaro'
 gem 'rubocop-rails'
+gem 'omniauth-google-oauth2'
 
 
 group :development, :test do
