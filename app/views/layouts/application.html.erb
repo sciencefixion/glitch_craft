@@ -25,21 +25,21 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <%# <% if current_user.nil? %> %>
+          <% if current_user.nil? %>
             <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/auth/google_oauth2">Login</a>
             </li>
-          <%# <% else %> %>
+          <% else %>
             <li class="nav-item">
               <a class="nav-link" href="/dashboard">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/sessions" data-method="delete" >Logout</a>
             </li>
-          <%# <% end %> %>
+          <% end %>
         </ul>
       </div>
     </nav>
