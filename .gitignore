@@ -30,3 +30,6 @@
 .DS_Store
 
 /sandbox
+
+# Ignore application configuration
+/config/application.yml
