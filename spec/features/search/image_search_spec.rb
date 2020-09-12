@@ -7,7 +7,7 @@ RSpec.describe "Search Images" do
     visit dashboard_path
 
     fill_in :search, with: "Cats"
-    click_link 'Search'
+    click_on 'Search'
     expect(current_path).to eq(search_path)
     expect(page).to have_css(".image-Deep AI")
     expect(page).to have_css(".image-Pixabay")
