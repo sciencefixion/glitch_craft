@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/dashboard', to: 'users#show'
   get '/search', to: 'search#index'
-  get '/search/:id', to: 'search#show'
-  post '/image', to: 'images#show'
+  get '/search/:id', to: 'search#show', as: :search_show
+  post '/image', to: 'images#create'
 end
