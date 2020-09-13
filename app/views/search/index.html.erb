@@ -1,5 +1,5 @@
 <iframe class="image-Deep-AI" src=<%= @image_options.deep_url %> width="520px" height="520px"></iframe>
-<%= button_to "Select Deep AI Image" %>
+<%= button_to "Select Deep AI Image", image_path, method: :post%>
 
 <iframe src=<%= @image_options.pixabay_url %> width="645px" height="395px"></iframe>
-<%= button_to "Select Pixabay Image" %>
+<%= button_to "Select Pixabay Image", image_path, method: :post %>
