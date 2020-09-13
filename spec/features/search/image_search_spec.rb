@@ -9,8 +9,6 @@ RSpec.describe "Search Images" do
     fill_in :search, with: "Cats"
     click_on 'Search'
     expect(current_path).to eq(search_path)
-    expect(page).to have_css(".image-Deep AI")
-    expect(page).to have_css(".image-Pixabay")
     expect(page).to have_button("Select Deep AI Image")
     expect(page).to have_button("Select Pixabay Image")
   end
