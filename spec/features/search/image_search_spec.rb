@@ -17,10 +17,12 @@ RSpec.describe "Search Images" do
     expect(Image.count).to eq(0)
     click_button "Select Deep AI Image"
     expect(Image.count).to eq(1)
-    expect(current_path).to eq(search_show_path)
     image = Image.last
-    # within ".image-#{image.id}" do
-    #
-    # end
+    expect(current_path).to eq(search_show_path(image))
+    # file = Down.download(image.url)
+    save_and_open_page
+    within ".image-#{image.source}" do
+      expect(page).to
+    end
   end
 end
