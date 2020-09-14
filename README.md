@@ -1,24 +1,58 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#GlitchCraft
 
-Things you may want to cover:
+## Relevant links
+[View our app!](https://glitch-craft.herokuapp.com/)
+[GlitchService Microservice](https://damp-forest-93176.herokuapp.com/)
+[GlitchService GitHub](https://github.com/Kathybui732/glitch-service)
 
-* Ruby version
+## Versions
+Ruby 2.5.3
+Rails 5.2.4.4
 
-* System dependencies
+## Configuration
+1. Run `git clone git@github.com:sciencefixion/glitch_craft.git`
+2. `cd glitch_craft`
+3. `bundle install`
+4. `rake db:{create,migrate}`
+5. `bundle exec figaro install`
+6. Add your google client secret and ID to the application.yml file
+7. `rails s`
 
-* Configuration
+## Test Suite
+1. Run `bundle exec rspec`
 
-* Database creation
+## Microservices
+This app depends on the [GlitchService microservice](https://damp-forest-93176.herokuapp.com/). GlitchService works in hand with GlitchCraft to consolidate two images that users can choose from to glitch.
 
-* Database initialization
+## Contributors
 
-* How to run the test suite
+[Dan Sehl's GitHub](https://github.com/dtsehl)
+[Linkedin](https://www.linkedin.com/in/danielsehl)
 
-* Services (job queues, cache servers, search engines, etc.)
+[Jane Greene's Github](https://github.com/janegreene)
+[Linkedin](https://www.linkedin.com/in/jane-greene-mba/)
 
-* Deployment instructions
+[Kathy Bui's Github](https://github.com/Kathybui732)
+[Linkedin](https://www.linkedin.com/in/kathy-bui-87a27a1ab/)
 
-* ...
+[Dorion's GitHub]()
+[Linkedin]()
+
+## Our App
+
+### Schema
+![]()
+
+### Welcome page
+![](https://imgur.com/Bz6sJzN)
+
+### User Dashboard
+![]()
+
+### Image Search Results
+![]()
+
+### Glitch an image!
+![]()
