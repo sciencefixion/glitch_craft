@@ -4,7 +4,9 @@
 
 ## Relevant links
 [View our app!](https://glitch-craft.herokuapp.com/)
+
 [GlitchService Microservice](https://damp-forest-93176.herokuapp.com/)
+
 [GlitchService GitHub](https://github.com/Kathybui732/glitch-service)
 
 ## Versions
@@ -28,16 +30,16 @@ This app depends on the [GlitchService microservice](https://damp-forest-93176.h
 
 ## Contributors
 
-[Dan Sehl's GitHub](https://github.com/dtsehl)
+[Dan Sehl's GitHub](https://github.com/dtsehl) &
 [Linkedin](https://www.linkedin.com/in/danielsehl)
 
-[Jane Greene's Github](https://github.com/janegreene)
+[Jane Greene's Github](https://github.com/janegreene) &
 [Linkedin](https://www.linkedin.com/in/jane-greene-mba/)
 
-[Kathy Bui's Github](https://github.com/Kathybui732)
+[Kathy Bui's Github](https://github.com/Kathybui732) &
 [Linkedin](https://www.linkedin.com/in/kathy-bui-87a27a1ab/)
 
-[Dorion's GitHub]()
+[Dorion's GitHub]() &
 [Linkedin]()
 
 ## Our App
