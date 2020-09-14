@@ -13,9 +13,17 @@ RSpec.describe "Search Images" do
     expect(page).to have_button("Select Deep AI Image")
     expect(page).to have_button("Select Pixabay Image")
   end
-  it "can save an image" do
+  it "can save an image from Deep AI" do
     expect(Image.count).to eq(0)
     click_button "Select Deep AI Image"
+    expect(Image.count).to eq(1)
+    image = Image.last
+    expect(current_path).to eq(search_show_path(image))
+    expect(page).to have_css(".image")
+  end
+  it "can save an image from Pixabay" do
+    expect(Image.count).to eq(0)
+    click_button "Select Pixabay Image"
     expect(Image.count).to eq(1)
     image = Image.last
     expect(current_path).to eq(search_show_path(image))
