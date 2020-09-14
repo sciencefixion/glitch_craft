@@ -1,8 +1,9 @@
 class ImagesController < ApplicationController
+  before_action :require_user
   def create
     image = Image.create!(image_params)
     download = Down.download(image.url)
-    image.original.attach(io: download, filename: "image.jpg")
+    image.original.attach(io: download, filename: 'image.jpg')
     redirect_to search_show_path(image)
   end
 

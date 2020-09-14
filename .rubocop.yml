@@ -13,6 +13,7 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
     - './*'
+    - 'sandbox/**/*'
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/Documentation:
