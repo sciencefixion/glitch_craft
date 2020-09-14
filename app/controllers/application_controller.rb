@@ -12,4 +12,9 @@ class ApplicationController < ActionController::Base
   def search_errors
     render status: :bad_request
   end
+  private
+
+  def require_user
+    render file: '/public/404' if current_user.nil?
+  end
 end
