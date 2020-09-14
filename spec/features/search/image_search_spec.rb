@@ -19,10 +19,6 @@ RSpec.describe "Search Images" do
     expect(Image.count).to eq(1)
     image = Image.last
     expect(current_path).to eq(search_show_path(image))
-    # file = Down.download(image.url)
-    save_and_open_page
-    within ".image-#{image.source}" do
-      expect(page).to
-    end
+    expect(page).to have_css(".image")
   end
 end
