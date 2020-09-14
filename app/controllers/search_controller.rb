@@ -1,4 +1,5 @@
 class SearchController < ApplicationController
+  before_action :require_user
   def index
     conn = Faraday.get("http://localhost:9292/images/#{params[:search]}")
     json = JSON.parse(conn.body, symbolize_names: true)
