@@ -6,10 +6,10 @@ class ApplicationController < ActionController::Base
   end
 
   def server_errors
-     render status: 500
+    render status: :internal_server_error
   end
 
   def search_errors
-     render status: 400
+    render status: :bad_request
   end
 end
