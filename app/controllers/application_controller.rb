@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   private
+  
   def require_user
     render file: '/public/404' if current_user.nil?
   end
