@@ -48,7 +48,7 @@ This app depends on the [GlitchService microservice](https://damp-forest-93176.h
 ![]()
 
 ### Welcome page
-![](https://imgur.com/Bz6sJzN)
+![Welcome Page](https://imgur.com/Bz6sJzN)
 
 ### User Dashboard
 ![]()
