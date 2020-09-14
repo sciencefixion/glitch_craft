@@ -5,7 +5,7 @@ RSpec.describe "Search Images" do
     user = User.from_omniauth(mock_user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     visit dashboard_path
-    fill_in :search, with: "Cats"
+    fill_in :search, with: "Cat"
     click_on 'Search'
   end
   it "can search an image via keyword" do
@@ -28,5 +28,13 @@ RSpec.describe "Search Images" do
     image = Image.last
     expect(current_path).to eq(search_show_path(image))
     expect(page).to have_css(".image")
+  end
+  it "can search an image via two keywords" do
+    user = User.from_omniauth(mock_user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    visit dashboard_path
+    fill_in :search, with: "white dog"
+    click_on 'Search'
+    expect(current_path).to eq(search_path)
   end
 end

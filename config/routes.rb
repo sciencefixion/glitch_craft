@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index'
   get '/search/:id', to: 'search#show', as: :search_show
   post '/image', to: 'images#create'
+  get '/500', to: 'application#server_errors'
+  get '/400', to: 'application#search_errors'
 end

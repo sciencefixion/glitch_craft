@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>We're sorry, but something went wrong (400)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   @import url(https://fonts.googleapis.com/css?family=Gilda+Display);
@@ -47,7 +47,7 @@
   }
 
   .error:after {
-    content: '404';
+    content: '400';
     font-family: 'Gilda Display', serif;
     font-size: 100px;
     font-style: italic;
@@ -83,9 +83,37 @@
     right: 0;
     animation: noise-3 1s linear infinite;
   }
+  .center {
+    text-align: center;
+    font-family: 'Gilda Display', serif;
+    font-size: 20px;
+    width: 800px;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 180px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .low_center {
+    text-align: center;
+    font-family: 'Gilda Display', serif;
+    font-size: 20px;
+    width: 800px;
+    height: 60px;
+    line-height: 60px;
+    margin: auto;
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
   .error:before {
-    content: '500';
+    content: '400';
     font-family: 'Gilda Display', serif;
     font-size: 100px;
     font-style: italic;
@@ -135,9 +163,10 @@
 </head>
 
 <body class="rails-default-error-page">
-  <div class="error">500</div>
+  <div class="error">400</div>
   <br /><br />
-  <span class="info">Server Errors</span>
+  <span class="info">Search Errors</span>
+  <span class="center"><a href="/dashboard">Use one or two real words this time. </a></span>
   <img src="http://images2.layoutsparks.com/1/160030/too-much-tv-static.gif" class="static" />
 </body>
 </html>
