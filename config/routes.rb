@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2/callback', to: 'sessions#create'
   get '/auth/failure', to:redirect('/')
   get '/login', to: 'sessions#new'
-  get '/logout', to: 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy'
   get '/dashboard', to: 'users#show'
   get '/search', to: 'search#index'
   get '/search/:id', to: 'search#show', as: :search_show

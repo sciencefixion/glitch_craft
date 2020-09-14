@@ -7,11 +7,10 @@ class SessionsController < ApplicationController
     redirect_to '/dashboard'
   end
 
-  # def destroy
-  #   if current_user
-  #     session.delete(:user_id)
-  #     flash[:success] = 'Glitch you later!'
-  #   end
-  #   redirect_to root_path
-  # end
+  def destroy
+    if current_user
+      session.delete(:user_id)
+    end
+    redirect_to root_path
+  end
 end
