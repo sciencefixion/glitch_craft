@@ -1,4 +1,4 @@
-class Image < ApplicationRecord
+class ApiImage < ApplicationRecord
   validates :url, presence: true
   validates :source, presence: true
 

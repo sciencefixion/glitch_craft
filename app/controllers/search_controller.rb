@@ -16,6 +16,6 @@ class SearchController < ApplicationController
   end
 
   def show
-    @image = Image.find(params[:id])
+    @image = ApiImage.find(params[:id])
   end
 end
