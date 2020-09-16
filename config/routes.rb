@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/500', to: 'application#server_errors'
   get '/400', to: 'application#search_errors'
   # get '(*url)', to: redirect('/404')
+  get '/information', to: 'information#index'
 end
