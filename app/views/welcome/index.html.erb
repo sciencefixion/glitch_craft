@@ -3,8 +3,12 @@
     <div class="card" style="width: 50rem; margin-top: 130px; background: rgba(0, 0, 0, 0.8); font-family:Monaco;">
       <h1 style="font-size:80px; color:#b3b3b3; margin: 50px 0 50px 0; font-family:Monaco; ">GlitchCraft</h1>
       <div class="card-body" style="color:#b3b3b3; margin: 25px;">
-        <p class="card-text description">This app allows you to glitch a photo that is created by an AI based on a word or phrase that you provide.</p>
-        <a href="/auth/google_oauth2" class="btn btn-dark" style="margin: 25px 0;">Login with Google to Start Glitching</a><br>
+        <p class="card-text description">This app allows you to glitch a photo.</p>
+        <p class="card-text description">You can chose from an AI generated photo or a human one.</p>
+        <p class="card-text description">Come discover your databending powers!</p>
+        <% if current_user.nil? %>
+          <a href="/auth/google_oauth2" class="btn btn-dark" style="margin: 25px 0;">Login with Google to Start Glitching</a><br>
+        <% end %>
         <a href="/information" class="btn btn-danger" style="margin: 25px 0;">What is Glitch Art?</a>
       </div>
     </div>
