@@ -18,7 +18,7 @@ RSpec.describe 'Information page' do
       expect(page).to have_link("Glitchet's art resourses")
 
       expect(page).to have_content('About Our App')
-      expect(page).to have_content("Glitch Craft allows you to select an image to glitch from two different sourcesbased off a keyword. The first image is generated fully from scratch based on an AI's preception of the keyword from DeepAI. The second image is found based off human generated perceptions of a keyword through image tags. After selecting an image, we'll cause a random glitch to the image's code and yeild your new glitched masterpiece!")
+      expect(page).to have_content("Glitch Craft allows you to select an image to glitch from two different sources based off a keyword. The first image is generated fully from scratch based on an AI's preception of the keyword from DeepAI. The second image is found based off human generated perceptions of a keyword through image tags. After selecting an image, we'll cause a random glitch to the image's code and yeild your new glitched masterpiece!")
     end
   end
 end
