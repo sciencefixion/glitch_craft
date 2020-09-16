@@ -39,6 +39,8 @@ gem 'faraday'
 gem 'figaro'
 gem 'rubocop-rails'
 gem 'omniauth-google-oauth2'
+gem 'mini_magick'
+gem 'pnglitch'
 
 
 group :development, :test do

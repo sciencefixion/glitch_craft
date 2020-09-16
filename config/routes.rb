@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   post '/image', to: 'images#create'
   get '/500', to: 'application#server_errors'
   get '/400', to: 'application#search_errors'
-  get '(*url)', to: redirect('/404')
+  # get '(*url)', to: redirect('/404')
 end

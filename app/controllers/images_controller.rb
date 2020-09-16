@@ -1,9 +1,11 @@
 class ImagesController < ApplicationController
   before_action :require_user
+  include Glitchable
   def create
-    image = Image.create!(image_params)
+    image = current_user.api_images.create!(image_params)
     download = Down.download(image.url)
     image.original.attach(io: download, filename: 'image.jpg')
+    basic_glitch(image)
     redirect_to search_show_path(image)
   end
 
