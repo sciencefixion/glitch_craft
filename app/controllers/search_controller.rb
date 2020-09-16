@@ -17,5 +17,6 @@ class SearchController < ApplicationController
 
   def show
     @image = ApiImage.find(params[:id])
+    # binding.pry
   end
 end
