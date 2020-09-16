@@ -5,4 +5,5 @@ class ApiImage < ApplicationRecord
   belongs_to :user
 
   has_one_attached :original
+  has_one_attached :glitched
 end
