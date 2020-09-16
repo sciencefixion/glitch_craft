@@ -44,11 +44,13 @@
       </div>
     </nav>
 
-    <div class="alert alert-danger" role="alert">
+    <% if !flash.nil? %>
       <% flash.each do |type, message| %>
-        <%= tag.div message %>
+        <div class="alert alert-danger" role="alert">
+          <%= tag.div message %>
+        </div>
       <% end %>
-    </div>
+    <% end %>
 
     <%= yield %>
   </body>

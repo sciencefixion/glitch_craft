@@ -13,7 +13,7 @@ RSpec.describe 'Welcome Index' do
       visit root_path
       expect(page).to have_content('GlitchCraft')
       within ('.description') do
-        expect(page).to have_content('This app allows you to glitch a photo that is created by an AI based on a word or phrase that you provide.') # Just a placeholder - Need an actual description
+        expect(page).to have_content('This app allows you to glitch a photo. You can chose from an AI generated photo or a human one and corrupt its file using our app!. Come discover your databending powers!')
       end
       expect(page).to have_link('Login with Google to Start Glitching')
     end

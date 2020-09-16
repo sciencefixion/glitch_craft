@@ -7,9 +7,8 @@ RSpec.describe 'Information page' do
       click_on 'What is Glitch Art?'
       expect(current_path).to eq('/information')
       expect(page).to have_content('What is Glitch Art?')
-      expect(page).to have_content("Have you ever accidentally opened a file in the wrong application and panicked? Little did you know you just unlocked a new databending skill! Databending is the process of manipulating a media file of a certain format in a software designed to edit files of another format. Artists have figured out how to percisely manipulate and delicately corrupt data without breaking the file.
-
-      Glitch Art is a visual style artform that utilizes databending. It is characteried by using digital and analog errors for asthetic purposes and exposes a medium for expression and creativity in electronic technologies.")
+      expect(page).to have_content("Have you ever accidentally opened a file in the wrong application and panicked? Little did you know you just unlocked a new databending skill! Databending is the process of manipulating a media file of a certain format in a software designed to edit files of another format. Artists have figured out how to percisely manipulate and delicately corrupt data without breaking the file.")
+      expect(page).to have_content("Glitch Art is a visual style artform that utilizes databending. It is characteried by using digital and analog errors for asthetic purposes and exposes a medium for expression and creativity in electronic technologies.")
       expect(page).to have_content('Here are some resources we enjoyed!')
       expect(page).to have_content('Phillip Stearns has created an extensive resource list for glitch art! Check it out if you want to learn more!')
       expect(page).to have_link('resource list')
