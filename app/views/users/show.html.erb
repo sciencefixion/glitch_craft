@@ -6,9 +6,24 @@
   <p>
     <%= form_tag "/search", method: :get do %>
     <%= label_tag :search %>
-    <%= text_field_tag :search %>
+    <%= text_field_tag :search, nil, placeholder: 'Keyword'%>
 
     <%= submit_tag "Search" %>
     <% end %>
   </p>
 </section>
+
+<div class="card text-white bg-info mb-3" style="max-width: 30rem;">
+  <div class="card-header">Don't know what to do?</div>
+  <div class="card-body">
+    <h5 class="card-title">Instructions:</h5>
+    <p class="card-text">
+    1. Enter a keyword into the search bar above and hit search.<br><br>
+    2. GlitchCraft will render two images for your choosing:<br></p>
+    <p style="margin-left: 40px">a. The Corrupt AI Image is an AI generated image from scratch based off it's perception of your keyword.<br>
+    b. The Pixel Panic Image is a human tagged image relating to your keyword.<br></p>
+    3. Select your image and cause a glitch!<br>
+    <br>
+    NOTE: If you do not like your image selections, simply hit the back button on your browser and create a new search!
+  </div>
+</div>
