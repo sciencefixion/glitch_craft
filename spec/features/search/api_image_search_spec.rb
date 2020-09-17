@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Search ApiImages" do
+RSpec.describe "Search Index ApiImages" do
   before :each do
     user = User.from_omniauth(mock_user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
