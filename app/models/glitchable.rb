@@ -1,6 +1,8 @@
 require 'mini_magick'
 require 'pnglitch'
 require 'pry'
+require 'aws-sdk-s3'
+
 
 module Glitchable
   def convert_to_png(image)
