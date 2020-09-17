@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_15_172840) do
+ActiveRecord::Schema.define(version: 2020_09_17_203800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_09_15_172840) do
     t.string "pixabay_id"
     t.string "deep_id"
     t.bigint "user_id"
+    t.string "key"
     t.index ["user_id"], name: "index_api_images_on_user_id"
   end
 
