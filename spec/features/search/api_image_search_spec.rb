@@ -10,24 +10,28 @@ RSpec.describe "Search ApiImages" do
   end
   it "can search an image via keyword" do
     expect(current_path).to eq(search_path)
-    expect(page).to have_button("Select Deep AI Image")
-    expect(page).to have_button("Select Pixabay Image")
+    expect(page).to have_button("Glitch Image")
+    expect(page).to have_button("Glitch Image")
   end
   it "can save an image from Deep AI" do
-    expect(ApiImage.count).to eq(0)
-    click_button "Select Deep AI Image"
-    expect(ApiImage.count).to eq(1)
-    image = ApiImage.last
-    expect(current_path).to eq(search_show_path(image))
-    expect(page).to have_css(".image")
+    within(".image-Deep-AI") do
+      expect(ApiImage.count).to eq(0)
+      click_button "Glitch Image"
+      expect(ApiImage.count).to eq(1)
+      image = ApiImage.last
+      expect(current_path).to eq(search_show_path(image))
+      expect(page).to have_css(".image")
+    end
   end
   it "can save an image from Pixabay" do
-    expect(ApiImage.count).to eq(0)
-    click_button "Select Pixabay Image"
-    expect(ApiImage.count).to eq(1)
-    image = ApiImage.last
-    expect(current_path).to eq(search_show_path(image))
-    expect(page).to have_css(".image")
+    within(".image-Pixabay") do
+      expect(ApiImage.count).to eq(0)
+      click_button "Glitch Image"
+      expect(ApiImage.count).to eq(1)
+      image = ApiImage.last
+      expect(current_path).to eq(search_show_path(image))
+      expect(page).to have_css(".image")
+    end
   end
   it "can search an image via two keywords" do
     user = User.from_omniauth(mock_user)
