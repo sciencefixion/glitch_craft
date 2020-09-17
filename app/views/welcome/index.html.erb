@@ -1,24 +1,16 @@
 <body class="text-center" style="background-image: url('https://www.webdesignbites.com/wp-content/uploads/2019/04/glitch-art.jpg'); margin: 0 auto;">
   <center>
     <div class="card" style="width: 50rem; margin-top: 130px; background: rgba(0, 0, 0, 0.8); font-family:Monaco;">
-<<<<<<< HEAD
-      <h1 style="font-size:80px; color:#b3b3b3; margin: 50px 0 0 0; font-family:Monaco; ">GlitchCraft</h1>
-      <div class="card-body" style="color:#b3b3b3; margin: 10px;">
-        <div class="card-text description">
-          <p>This app allows you to glitch a photo. Come discover your databending powers!</p>
-        </div>
+      <h1 style="font-size:80px; color:#b3b3b3; margin: 50px 0 50px 0; font-family:Monaco; ">GlitchCraft</h1>
+      <div class="card-body" style="color:#b3b3b3; margin: 25px;">
+        <p class="card-text description text-monospace">This app allows you to glitch a photo that is created by an AI based on a word or phrase that you provide.</p>
+        <p class="card-text description text-monospace" style="color:red; margin:25px 0 0 0;">-DISCLAIMER! Pages may include flashing graphics. Proceed with caution-</p>
         <div style="margin: 50px 0 0 0;">
           <% if current_user.nil? %>
           <a href="/auth/google_oauth2" class="btn btn-dark" style="margin: 10px 0 0 0;">Login with Google to Start Glitching</a><br>
           <% end %>
           <a href="/information" class="btn btn-danger" style="margin: 10px 0;">What is Glitch Art?</a>
         </div>
-=======
-      <h1 style="font-size:80px; color:#b3b3b3; margin: 50px 0 50px 0; font-family:Monaco; ">GlitchCraft</h1>
-      <div class="card-body" style="color:#b3b3b3; margin: 25px;">
-        <p class="card-text description text-monospace">This app allows you to glitch a photo that is created by an AI based on a word or phrase that you provide.</p>
-        <a href="/auth/google_oauth2" class="btn btn-dark text-monospace" style="margin: 25px 0;">Login with Google to Start Glitching</a>
->>>>>>> 307928f3f07bd46df964843bc29dede2d108fd7b
       </div>
     </div>
   </center>

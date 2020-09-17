@@ -19,7 +19,7 @@
           <h4 class="card-title">Deep AI</h4>
           <img class="image-Deep-AI embed-responsive-item img-fluid" src=<%= @image_options.deep_url %> alt="Deep AI Image" style="max-width:350px; height:350px">
           <br><br>
-          <%= button_to "Glitch this Deep AI image", image_path, method: :post, class: "btn btn-dark", params: {url: @image_options.deep_url, source: @image_options.deep_source, deep_id: @image_options.deep_id} %>
+          <p class="button-deepai"><%= button_to "Glitch this Deep AI image", image_path, method: :post, class: "btn btn-dark", params: {url: @image_options.deep_url, source: @image_options.deep_source, deep_id: @image_options.deep_id} %></p>
         </div>
       </div>
       <div class="card content" style="margin:25px; background: rgba(0, 0, 0, 0.8);">
@@ -27,7 +27,7 @@
           <h4 class="card-title">Pixabay</h4>
           <img class="image-Pixabay embed-responsive-item img-fluid" src=<%= @image_options.pixabay_url %> alt="Pixabay Image" style="max-width:350px; height:350px">
           <br><br>
-          <%= button_to "Glitch this Pixabay image", image_path, method: :post, class: "btn btn-dark", params: {url: @image_options.pixabay_url, source: @image_options.pixabay_source, deep_id: @image_options.pixabay_id} %>
+          <p class="button-pixabay"><%= button_to "Glitch this Pixabay image", image_path, method: :post, class: "btn btn-dark", params: {url: @image_options.pixabay_url, source: @image_options.pixabay_source, deep_id: @image_options.pixabay_id} %></p>
         </div>
       </div>
     </div>
