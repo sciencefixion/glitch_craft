@@ -1,20 +1,16 @@
-require 'aws-sdk-s3'
-
 class ImagesController < ApplicationController
   before_action :require_user
   include Glitchable
-  def create
-    credentials = Aws::Credentials.new(ENV['AWS_ACCESS_KEY_ID'], ENV['AWS_SECRET_ACCESS_KEY'])
-    connection = Aws::S3::Client.new(region: 'us-east-1', credentials: credentials)
-    image = current_user.api_images.create!(image_params)
-    download = Down.download(image.url)
-    image.original.attach(io: download, filename: "#{image.url}.jpg")
-    basic_glitch(image)
-    File.open('lib/assets/glitched/new_image.png', 'rb') do |file|
-      connection.put_object(bucket: 'glitch-craft-images', key: 'image-key', body: file)
-    end
+  include S3able
 
-    redirect_to search_show_path(image)
+  def create
+    api_image = current_user.api_images.create!(image_params)
+    download = Down.download(api_image.url)
+    api_image.original.attach(io: download, filename: "#{api_image.url}.jpg")
+    basic_glitch(api_image)
+    api_image.attach_key(upload_image)
+    api_image.save
+    redirect_to search_show_path(api_image)
   end
 
   private
