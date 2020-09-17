@@ -1,9 +1,8 @@
-<h1>Dashboard</h1>
-
-<h2>Welcome <%= @user.name %></h2>
+<h1><%= @user.name %>'s dashboard</h1>
 
 <section class="image-search">
   <p>
+    Enter a keyword below and search for an image to glitch!
     <%= form_tag "/search", method: :get do %>
     <%= label_tag :search %>
     <%= text_field_tag :search, nil, placeholder: 'Keyword'%>
@@ -19,9 +18,9 @@
     <h5 class="card-title">Instructions:</h5>
     <p class="card-text">
     1. Enter a keyword into the search bar above and hit search.<br><br>
-    2. GlitchCraft will render two images for your choosing:<br></p>
-    <p style="margin-left: 40px">a. The Corrupt AI Image is an AI generated image from scratch based off it's perception of your keyword.<br>
-    b. The Pixel Panic Image is a human tagged image relating to your keyword.<br></p>
+    2. GlitchCraft will render two image options for glitching.<br></p>
+    <p style="margin-left: 40px">Option 1: The Corrupt DeepAI Image is an AI generated image from scratch based off it's perception of your keyword.<br>
+    b. The Pixabay Pixel Panic Image is a human tagged image relating to your keyword.<br></p>
     3. Select your image and cause a glitch!<br>
     <br>
     NOTE: If you do not like your image selections, simply hit the back button on your browser and create a new search!
