@@ -1,4 +1,42 @@
-<section class="image">
-  <%= image_tag @image.original %>
+<body class="text-center">
 
-</section>
+  <!-- The video -->
+  <video autoplay muted loop id="myVideo" style="z-index: -1">
+    <source src="https://i.imgur.com/oBG2hmh.mp4" type="video/mp4">
+  </video>
+  <!-- <body class="text-center" style="background-image: url('https://i.imgur.com/jEmEeEB.png'); margin: 0 auto;"> -->
+  <!-- Optional: some overlay text to describe the video -->
+  <div class="content">
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button class="myBtn" onclick="myFunction()">Pause</button>
+  </div>
+
+  <center>
+    <div class="card embed-responsive-4by3" style="width: 40rem; margin-top: 10px; background: rgba(0, 0, 0, 0.8);">
+      <div class="card-body" style="color:#b3b3b3; margin: 10px;">
+        <section>
+          <%= image_tag @image.glitched, :class => "glitched-image embed-responsive-item img-fluid" %>
+        </section>
+      </div>
+    </div>
+  </center>
+</body>
+
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
