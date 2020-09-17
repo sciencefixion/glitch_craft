@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/about', to: 'developers#index'
   get '/500', to: 'application#server_errors'
   get '/400', to: 'application#search_errors'
+  match 'download', to: 'images#download', as: 'download', via: :get
   get '*path', to: redirect('/404'), constraints: lambda { |req|
   req.path.exclude? 'rails/active_storage' }
   # get '(*url)', to: redirect('/404')
