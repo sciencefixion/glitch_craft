@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000; z-index: 10; background: rgba(0, 0, 0, 0.8);">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000000; z-index: 10; background: rgba(0, 0, 0, 0.8); font-family:monaco;">
       <a class="navbar-brand" href="/" style="color:#b3b3b3;">GlitchCraft</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,11 +30,20 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="/information">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="/auth/google_oauth2">Login</a>
             </li>
           <% else %>
             <li class="nav-item">
               <a class="nav-link" href="/dashboard">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/information">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About</a>
@@ -46,6 +55,15 @@
         </ul>
       </div>
     </nav>
+
+    <% if !flash.nil? %>
+      <% flash.each do |type, message| %>
+        <div class="alert alert-danger" role="alert">
+          <%= tag.div message %>
+        </div>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

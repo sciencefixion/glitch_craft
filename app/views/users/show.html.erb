@@ -1,14 +1,31 @@
-<h1>Dashboard</h1>
+<body class="text-center text-monospace" style="background-image: url('https://i.imgur.com/Hn8t8ib.jpg'); margin: 0 auto;">
+  <h2 style="margin: 50px"><%= @user.name %>'s dashboard</h1>
 
-<h2>Welcome <%= @user.name %></h2>
+  <section class="image-search">
+    <p>
+      Enter a keyword below and search for an image to glitch!
+      <%= form_tag "/search", method: :get do %>
+      <%= text_field_tag :search, nil, placeholder: 'keyword', class: 'rounded-pill', style: "background: rgba(0, 0, 0, 0.3);" %>
+      <br><br>
+      <%= submit_tag "Search", :class => "btn btn-outline-primary" %>
+      <% end %>
+    </p>
+  </section>
 
-<section class="image-search">
-  <p>
-    <%= form_tag "/search", method: :get do %>
-    <%= label_tag :search %>
-    <%= text_field_tag :search %>
-
-    <%= submit_tag "Search" %>
-    <% end %>
-  </p>
-</section>
+  <center>
+    <div class="card text-white bg-primary mb-3" style="max-width: 40rem; margin: 50px;">
+      <div class="card-header">Don't know what to do?</div>
+      <div class="card-body">
+        <h5 class="card-title">Instructions:</h5>
+        <p class="card-text text-left">
+        1. Enter a keyword into the search bar above and hit search.<br><br>
+        2. GlitchCraft will render two image options for glitching.<br></p>
+        <p class="card-text text-left" style="margin-left: 40px; text-left"><em>Option 1:</em> The DeepAI Image is an AI generated image from scratch based off it's perception of your keyword.<br>
+        <em>Option 2:</em> The Pixabay Image is a human tagged image relating to your keyword.<br></p>
+        <p class="card-text text-left" style="margin: 20px;">3. Select your image and cause a glitch!<br>
+        <br></p>
+        NOTE: If you do not like your image selections, simply hit the back button on your browser and create a new search!
+      </div>
+    </div>
+  </center>
+</body>
