@@ -41,6 +41,7 @@ gem 'rubocop-rails'
 gem 'omniauth-google-oauth2'
 gem 'mini_magick'
 gem 'pnglitch'
+gem "aws-sdk-s3", require: false
 
 
 group :development, :test do
