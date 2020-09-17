@@ -6,4 +6,8 @@ class ApiImage < ApplicationRecord
 
   has_one_attached :original
   has_one_attached :glitched
+
+  def attach_key(key)
+    self.key = key
+  end
 end
