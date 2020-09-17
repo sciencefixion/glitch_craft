@@ -5,7 +5,7 @@
     Enter a keyword below and search for an image to glitch!
     <%= form_tag "/search", method: :get do %>
     <%= label_tag :search %>
-    <%= text_field_tag :search, nil, placeholder: 'Keyword'%>
+    <%= text_field_tag :search, nil, placeholder: 'keyword'%>
 
     <%= submit_tag "Search" %>
     <% end %>

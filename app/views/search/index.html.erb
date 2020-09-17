@@ -3,32 +3,30 @@
     <video autoplay muted loop id="myVideo">
       <source src="https://i.imgur.com/mlcMvUl.mp4" type="video/mp4">
   </video>
-
-<!-- Optional: some overlay text to describe the video -->
-  <div class="content">
-    <h1>Heading</h1>
-    <p>Lorem ipsum...</p>
-    <!-- Use a button to pause/play the video with JavaScript -->
-    <button class="myBtn" onclick="myFunction()">Pause</button>
-  </div>
-
-  <div class="container embed-responsive-1by1" style="font-family: monaco;">
-    <div class="card-columns d-flex justify-content-center" style="margin:25px">
-      <div class="card content" style="margin:25px; background: rgba(0, 0, 0, 0.8);">
-        <div class="card-block" align="center">
-          <h4 class="card-title">Corrupt DeepAI Image</h4>
-          <img class="image-Deep-AI embed-responsive-item img-fluid" src=<%= @image_options.deep_url %> alt="Deep AI Image" style="max-width:350px; height:350px">
-
-          <a href="/image" class="btn btn-dark" style="margin: 25px 0;">Login with Google to Start Glitching</a>
-
-          <%= button_to "Select Image to Glitch", image_path, method: :post, params: {url: @image_options.deep_url, source: @image_options.deep_source, deep_id: @image_options.deep_id} %>
+  <div style="font-family: monaco;">
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="card content" style="background: rgba(0, 0, 0, 0.1);">
+      <center>
+      <h1>Image Options</h1>
+      <p>Select an image to glitch!</p>
+      <button class="myBtn" onclick="myFunction()">Pause</button>
+      </center>
+    </div>
+    <div class="container embed-responsive-1by1">
+      <div class="card-columns d-flex justify-content-center" style="">
+        <div class="card content" style="margin:0 25px 0 25px; background: rgba(0, 0, 0, 0.8);">
+          <div class="card-block" align="center">
+            <h4 class="card-title">Corrupt DeepAI Image</h4>
+            <img class="image-Deep-AI embed-responsive-item img-fluid" src=<%= @image_options.deep_url %> alt="Deep AI Image" style="max-width:350px; height:350px">
+            <%= button_to "Glitch Image", image_path, method: :post, params: {url: @image_options.deep_url, source: @image_options.deep_source, deep_id: @image_options.deep_id}, class: "btn btn-dark", style: "margin: 8px" %>
+          </div>
         </div>
-      </div>
-      <div class="card content" style="margin:25px; background: rgba(0, 0, 0, 0.8);">
-        <div class="card-block" align="center">
-          <h4 class="card-title">Pixabay Pixel Panic Image</h4>
-          <img class="image-Pixabay embed-responsive-item img-fluid" src=<%= @image_options.pixabay_url %> alt="Pixabay Image" style="max-width:350px; height:350px">
-          <%= button_to "Select Image to Glitch", image_path, method: :post, params: {url: @image_options.pixabay_url, source: @image_options.pixabay_source, deep_id: @image_options.pixabay_id} %>
+        <div class="card content" style="margin:0 25px 0 25px; background: rgba(0, 0, 0, 0.8);">
+          <div class="card-block" align="center">
+            <h4 class="card-title">Pixabay Pixel Panic Image</h4>
+            <img class="image-Pixabay embed-responsive-item img-fluid" src=<%= @image_options.pixabay_url %> alt="Pixabay Image" style="max-width:350px; height:350px">
+            <%= button_to "Glitch Image", image_path, method: :post, params: {url: @image_options.pixabay_url, source: @image_options.pixabay_source, deep_id: @image_options.pixabay_id}, class: "btn btn-dark", style: "margin: 8px"  %>
+          </div>
         </div>
       </div>
     </div>
