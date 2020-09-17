@@ -1,3 +1,5 @@
+require 'aws-sdk-s3'
+
 class SearchController < ApplicationController
   before_action :require_user
   def index
@@ -12,6 +14,7 @@ class SearchController < ApplicationController
 
   def show
     @image = ApiImage.find(params[:id])
+    @source = "https://glitch-craft-images.s3.amazonaws.com/image-key"
   end
 
   private
