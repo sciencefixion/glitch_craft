@@ -4,7 +4,7 @@ class ImagesController < ApplicationController
   def create
     image = current_user.api_images.create!(image_params)
     download = Down.download(image.url)
-    image.original.attach(io: download, filename: 'image.jpg')
+    image.original.attach(io: download, filename: "#{image.url}.jpg")
     basic_glitch(image)
     redirect_to search_show_path(image)
   end

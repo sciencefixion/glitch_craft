@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1><%= @user.name %>'s dashboard</h1>
 
 <section class="image-search">
@@ -26,3 +27,18 @@
     NOTE: If you do not like your image selections, simply hit the back button on your browser and create a new search!
   </div>
 </div>
+=======
+<body class="text-center" style="background-image: url('https://i.imgur.com/Hn8t8ib.jpg'); margin: 0 auto;">
+  <h2 class="text-monospace">Welcome <%= @user.name %></h2>
+
+  <section class="image-search text-monospace">
+    <p>
+      <%= form_tag "/search", method: :get do %>
+      <%= text_field_tag :search, nil, class: 'rounded-pill', style: "background: rgba(0, 0, 0, 0.3);" %>
+      <br><br>
+      <%= submit_tag "Search", :class => "btn btn-outline-primary" %>
+      <% end %>
+    </p>
+  </section>
+</body>
+>>>>>>> 307928f3f07bd46df964843bc29dede2d108fd7b
