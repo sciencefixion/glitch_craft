@@ -10,9 +10,10 @@ class ImagesController < ApplicationController
     download = Down.download(image.url)
     image.original.attach(io: download, filename: 'image.jpg')
     basic_glitch(image)
-    response = File.open('lib/assets/glitched/new_image.png', 'rb') do |file|
+    File.open('lib/assets/glitched/new_image.png', 'rb') do |file|
       connection.put_object(bucket: 'glitch-craft-images', key: 'image-key', body: file)
     end
+
     redirect_to search_show_path(image)
   end
 
