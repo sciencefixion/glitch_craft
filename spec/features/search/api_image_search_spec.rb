@@ -20,7 +20,6 @@ RSpec.describe "Search ApiImages" do
       expect(ApiImage.count).to eq(1)
       image = ApiImage.last
       expect(current_path).to eq(search_show_path(image))
-      expect(page).to have_css(".image")
     end
   end
   it "can save an image from Pixabay" do
@@ -30,7 +29,6 @@ RSpec.describe "Search ApiImages" do
       expect(ApiImage.count).to eq(1)
       image = ApiImage.last
       expect(current_path).to eq(search_show_path(image))
-      expect(page).to have_css(".image")
     end
   end
   it "can search an image via two keywords" do
