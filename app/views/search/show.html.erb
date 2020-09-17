@@ -1,14 +1,19 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <body class="text-center">
 
   <!-- The video -->
   <video autoplay muted loop id="myVideo" style="z-index: -1">
     <source src="https://i.imgur.com/oBG2hmh.mp4" type="video/mp4">
   </video>
-  <!-- <body class="text-center" style="background-image: url('https://i.imgur.com/jEmEeEB.png'); margin: 0 auto;"> -->
-  <!-- Optional: some overlay text to describe the video -->
+
   <div class="content">
-    <!-- Use a button to pause/play the video with JavaScript -->
-    <button class="myBtn" onclick="myFunction()">Pause</button>
+    <%= link_to 'Download', download_path, target: '_blank', class: "myBtn fa fa-download" %>
+    <button class="myBtn fa" onclick="myFunction()">Pause</button>
   </div>
 
   <center>
@@ -20,6 +25,8 @@
       </div>
     </div>
   </center>
+
+  <!-- <button class="btn"><i class="fa fa-download"></i> Download</button> -->
 </body>
 
 <script>
