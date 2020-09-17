@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index'
   get '/search/:id', to: 'search#show', as: :search_show
   post '/image', to: 'images#create'
+  get '/information', to: 'information#index'
+  get '/about', to: 'developers#index'
   get '/500', to: 'application#server_errors'
   get '/400', to: 'application#search_errors'
+  get '*path', to: redirect('/404'), constraints: lambda { |req|
+  req.path.exclude? 'rails/active_storage' }
   # get '(*url)', to: redirect('/404')
 end

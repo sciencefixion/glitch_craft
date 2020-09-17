@@ -10,12 +10,12 @@ RSpec.describe "Search ApiImages" do
   end
   it "can search an image via keyword" do
     expect(current_path).to eq(search_path)
-    expect(page).to have_button("Select Deep AI Image")
-    expect(page).to have_button("Select Pixabay Image")
+    expect(page).to have_css(".button-deepai")
+    expect(page).to have_css(".button-pixabay")
   end
   it "can save an image from Deep AI" do
     expect(ApiImage.count).to eq(0)
-    click_button "Select Deep AI Image"
+    click_button "Glitch this Deep AI image"
     expect(ApiImage.count).to eq(1)
     image = ApiImage.last
     expect(current_path).to eq(search_show_path(image))
@@ -23,7 +23,7 @@ RSpec.describe "Search ApiImages" do
   end
   it "can save an image from Pixabay" do
     expect(ApiImage.count).to eq(0)
-    click_button "Select Pixabay Image"
+    click_on "Glitch this Pixabay image"
     expect(ApiImage.count).to eq(1)
     image = ApiImage.last
     expect(current_path).to eq(search_show_path(image))

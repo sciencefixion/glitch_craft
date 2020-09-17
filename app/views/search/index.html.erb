@@ -5,27 +5,29 @@
   </video>
 
 <!-- Optional: some overlay text to describe the video -->
-  <div class="content">
-    <h1>Heading</h1>
-    <p>Lorem ipsum...</p>
+  <div class="content text-monospace">
+    <h1>select an image to glitch its code</h1>
+    <p>the new image will be saved to your profile</p>
     <!-- Use a button to pause/play the video with JavaScript -->
-    <button class="myBtn" onclick="myFunction()">Pause</button>
+    <button class="myBtn btn-dark" onclick="myFunction()">Pause</button>
   </div>
 
   <div class="container embed-responsive-1by1">
     <div class="card-columns d-flex justify-content-center" style="margin:25px">
       <div class="card content" style="margin:25px; background: rgba(0, 0, 0, 0.8);">
         <div class="card-block" align="center">
-          <h4 class="card-title">Corrupt AI</h4>
+          <h4 class="card-title">Deep AI</h4>
           <img class="image-Deep-AI embed-responsive-item img-fluid" src=<%= @image_options.deep_url %> alt="Deep AI Image" style="max-width:350px; height:350px">
-          <%= button_to "Select Deep AI Image", image_path, method: :post, form_class: "myBtn", params: {url: @image_options.deep_url, source: @image_options.deep_source, deep_id: @image_options.deep_id} %>
+          <br><br>
+          <p class="button-deepai"><%= button_to "Glitch this Deep AI image", image_path, method: :post, class: "btn btn-dark", params: {url: @image_options.deep_url, source: @image_options.deep_source, deep_id: @image_options.deep_id} %></p>
         </div>
       </div>
       <div class="card content" style="margin:25px; background: rgba(0, 0, 0, 0.8);">
         <div class="card-block" align="center">
-          <h4 class="card-title">Pixel Panic</h4>
+          <h4 class="card-title">Pixabay</h4>
           <img class="image-Pixabay embed-responsive-item img-fluid" src=<%= @image_options.pixabay_url %> alt="Pixabay Image" style="max-width:350px; height:350px">
-          <%= button_to "Select Pixabay Image", image_path, method: :post, params: {url: @image_options.pixabay_url, source: @image_options.pixabay_source, deep_id: @image_options.pixabay_id} %>
+          <br><br>
+          <p class="button-pixabay"><%= button_to "Glitch this Pixabay image", image_path, method: :post, class: "btn btn-dark", params: {url: @image_options.pixabay_url, source: @image_options.pixabay_source, deep_id: @image_options.pixabay_id} %></p>
         </div>
       </div>
     </div>

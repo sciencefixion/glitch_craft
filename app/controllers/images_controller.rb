@@ -8,7 +8,7 @@ class ImagesController < ApplicationController
     connection = Aws::S3::Client.new(region: 'us-east-1', credentials: credentials)
     image = current_user.api_images.create!(image_params)
     download = Down.download(image.url)
-    image.original.attach(io: download, filename: 'image.jpg')
+    image.original.attach(io: download, filename: "#{image.url}.jpg")
     basic_glitch(image)
     File.open('lib/assets/glitched/new_image.png', 'rb') do |file|
       connection.put_object(bucket: 'glitch-craft-images', key: 'image-key', body: file)
