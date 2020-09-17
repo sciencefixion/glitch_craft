@@ -14,8 +14,8 @@ module Glitchable
       p.glitch do |data|
         data.gsub(/\d/, 'x')
       end
-      p.save 'lib/assets/glitched/new_image.png'
-      image.glitched.attach(io: File.open('lib/assets/glitched/new_image.png'), filename: 'glitched.png')
+      p.save "lib/assets/glitched/#{image.id}.png"
+      image.glitched.attach(io: File.open("lib/assets/glitched/#{image.id}.png"), filename: "glitched_#{image.id}.png")
     end
   end
 end
