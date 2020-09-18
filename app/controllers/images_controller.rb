@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class ImagesController < ApplicationController
   before_action :require_user
   include Glitchable
@@ -11,6 +13,10 @@ class ImagesController < ApplicationController
     api_image.attach_key(upload_image)
     api_image.save
     redirect_to search_show_path(api_image)
+  end
+
+  def download
+    send_file 'lib/assets/glitched/new_image.png', type: 'image/png', status: 202
   end
 
   private
