@@ -16,9 +16,6 @@ class ImagesController < ApplicationController
   end
 
   def download
-    # uuid = SecureRandom.uuid
-    # image_file = "lib/assets/new_image.png"
-    # File.rename(image_file, "lib/assets/glitch#{uuid}.png")
     send_file 'lib/assets/glitched/new_image.png', type: 'image/png', status: 202
   end
 
