@@ -15,7 +15,7 @@ RSpec.describe 'Seach show page' do
 
       click_on 'Download'
       expect(current_path).to eq(download_path)
-      expect(response).to be_successful
+      expect(status_code).to eq(202)
     end
   end
 end
