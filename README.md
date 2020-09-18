@@ -77,3 +77,15 @@ This app depends on the [GlitchService microservice](https://damp-forest-93176.h
 <p align="center">
  <img src="https://i.imgur.com/NKv7AwP.jpg">
 </p>
+
+## Wishlist
+- We wanted a user’s personal gallery
+- A community gallery of all user’s glitches
+- A way to favorite someone else’s glitches to show up on user’s dashboard
+- A way to upvote glitches user’s liked that could show up in a spotlight gallery
+more glitching functions
+- A way to let users upload their own images
+
+## Known Issues
+- Our production site isn't confiugred to use S3 yet, so it is not up and running
+- Our app is not optimized for safari; images may not render
