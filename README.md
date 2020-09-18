@@ -45,15 +45,38 @@ This app depends on the [GlitchService microservice](https://damp-forest-93176.h
 
 ### Schema
 ![Schema]()
-
+<p align="center">
+ <img src="https://i.imgur.com/31bogeL.png">
+</p>
 ### Welcome page
 ![Welcome Page](https://i.imgur.com/Bz6sJzN.png)
 
 ### User Dashboard
 ![User Dashboard]()
+<p align="center">
+ <img src="https://i.imgur.com/2aoh8Qu.jpg">
+</p>
 
 ### Image Search Results
 ![Image Search Results]()
+<p align="center">
+ <img src="https://i.imgur.com/8UEzivt.jpg">
+</p>
 
 ### Glitch an image!
 ![Glitch an Image]()
+<p align="center">
+ <img src="https://i.imgur.com/CjExz6m.jpg">
+</p>
+
+### FAQ
+![FAQ]()
+<p align="center">
+ <img src="https://i.imgur.com/CcKkvEM.png">
+</p>
+
+### About Us
+![About Us]()
+<p align="center">
+ <img src="https://i.imgur.com/NKv7AwP.jpg">
+</p>
