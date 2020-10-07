@@ -1,5 +1,9 @@
 # GlitchCraft
-GlitchCraft is a Ruby on Rails application allowing users to [glitch images](https://en.wikipedia.org/wiki/Glitch_art). Users can search for images based off a keyword that will return two images for the user's choosing. The first image is created by an AI from scratch based on the keyword via [DeepAI](https://deepai.org/machine-learning-model/text2img), while the second is returned based off search results from human generated image tags in [pixabay](https://pixabay.com/en/photos/search/). This gives user's the option to glitch an image that resembles human perceived notions or an AI's generated notions. GlitchCraft uses a combination of JavaScript and Canvas to glitch the images and employs Google OAuth to authenticate users. Images are stored via ActiveStorage and can be downloaded to the user's computer.
+GlitchCraft is a Ruby on Rails application allowing users to [glitch images](https://en.wikipedia.org/wiki/Glitch_art). Users can use search for a keyword which then returns an image from two APIs via the [GlitchService Microservice](https://damp-forest-93176.herokuapp.com/). One of these images is then chosen to be glitched.
+
+The first image returned is generated from scratch by [DeepAI](https://deepai.org/machine-learning-model/text2img), and the second is returned based on human image tags from [Pixabay](https://pixabay.com/en/photos/search/). This gives users the unique option to glitch an image that is either what an AI thinks the search term represents or what humans think.
+
+Despite the limitations of Ruby as it relates to visual media, the GlitchCraft team has been able to glitch images using only that language. We employ Google OAuth to authenticate users and images are stored with a mixture of Amazon Web Services’ S3 and Ruby on Rails’ ActiveStorage.
 
 ## Relevant links
 [View our app!](https://glitch-craft.herokuapp.com/)
