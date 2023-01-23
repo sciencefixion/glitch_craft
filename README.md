@@ -91,5 +91,5 @@ This app depends on the [GlitchService microservice](https://damp-forest-93176.h
 - A way to let users upload their own images
 
 ## Known Issues
-- Our production site isn't confiugred to use S3 yet, so it is not up and running
+- Our production site isn't configured to use S3 yet, so it is not up and running
 - Our app is not optimized for safari; images may not render
