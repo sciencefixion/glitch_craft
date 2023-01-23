@@ -1,5 +1,5 @@
 # GlitchCraft
-GlitchCraft is a Ruby on Rails application allowing users to [glitch images](https://en.wikipedia.org/wiki/Glitch_art). Users can use search for a keyword which then returns an image from two APIs via the [GlitchService Microservice](https://damp-forest-93176.herokuapp.com/). One of these images is then chosen to be glitched.
+GlitchCraft is a Ruby on Rails application allowing users to [glitch images](https://en.wikipedia.org/wiki/Glitch_art). Users can search for a keyword which then returns an image from two APIs via the [GlitchService Microservice](https://damp-forest-93176.herokuapp.com/). One of these images is then chosen to be glitched.
 
 The first image returned is generated from scratch by [DeepAI](https://deepai.org/machine-learning-model/text2img), and the second is returned based on human image tags from [Pixabay](https://pixabay.com/en/photos/search/). This gives users the unique option to glitch an image that is either what an AI thinks the search term represents or what humans think.
 
