@@ -42,7 +42,7 @@ This app depends on the [GlitchService microservice](https://damp-forest-93176.h
 [Kathy Bui's Github](https://github.com/Kathybui732) &
 [Linkedin](https://www.linkedin.com/in/kathy-bui-87a27a1ab/)
 
-[Dorion's GitHub](https://github.com/sciencefixion) &
+[Rion's GitHub](https://github.com/sciencefixion) &
 [Linkedin](https://www.linkedin.com/in/rion-h-7b3668b2/)
 
 ## Our App
